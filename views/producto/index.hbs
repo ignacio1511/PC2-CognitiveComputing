@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+<p1>Ignacio de la Cuba - Lab 04</p1>
+<h1> Productos</h1>
+    <p >
+        <div class="container">
+            <h3><a href="/productos/create">Crear Producto</a></h3>
+            <h1>Lista de Productos</h1>
+            {{#if productos }}
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Categoria</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each productos }}
+                        <tr>
+                            <td><a href="/productos/show/{{ _id }}">{{ codigo }}</a></td>
+                            <td>{{ descripcion }}</td>
+                            <td>{{ precio }}</td>
+                            <td>{{ stock }}</td>
+                            <td>{{ marca }}</td>
+                            <td>{{ modelo }}</td>
+                            <td>{{ categoria }}</td>
+                            <td>{{ fecha }}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{~^~}}
+                <div>Productos no encontrados.</div>
+            {{/if}}
+        </div>
+    </p>
