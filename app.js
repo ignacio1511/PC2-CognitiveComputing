@@ -5,12 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var productosRouter = require('./routes/productos');
+var estudiantesRouter = require('./routes/estudiantes');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var app = express();
-var mongoDB = 'mongodb://127.0.0.1:27017/lab04';
+var mongoDB = 'mongodb://127.0.0.1:27017/pc2CognitiveDB';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology:true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/productos', productosRouter);
+app.use('/estudiantes', estudiantesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

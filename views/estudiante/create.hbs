@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Estudiante Nuevo</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/estudiantes">Lista de Estudiantes</a></h3>
+            <h1>Crear Estudiante Nuevo</h1>
+            <form action="/Estudiantes/save" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Codigo</td>
+                            <td><input type="text" name="codigo" /></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td>Apellido</td>
+                            <td><input type="text" name="apellido" /></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="text" name="email" /></td>
+                        </tr>
+                        <tr>
+                            <td>Edad</td>
+                            <td><input type="text" name="edad" /></td>
+                        </tr>
+                        <tr>
+                            <td>Pais</td>
+                            <td><input type="text" name="pais" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Guardar"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
